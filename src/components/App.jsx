@@ -1,4 +1,13 @@
-export const App = () => {
+import React from "react";
+
+
+export class App extends React.Component {
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0
+  }
+  render() {
   return (
     <div
       style={{
@@ -13,4 +22,7 @@ export const App = () => {
       React homework template
     </div>
   );
+}
 };
+
+// export default App;
