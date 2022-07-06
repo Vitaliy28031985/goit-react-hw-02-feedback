@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
+import s from './FeedbackOptions.module.css';
 
-import React from 'react';
 export const FeedbackOptions = ({options, onFeedback}) => {
 return (
-   <div>
-      {options.map(option => (<button
-      type="button"
+   <div className={s.conteiner}>
+      {options.map(option => (<button className={s.button}      type="button"
       data-feedback={option}
       onClick={onFeedback}
       key={option}
