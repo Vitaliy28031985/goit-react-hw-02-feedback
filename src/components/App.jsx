@@ -4,7 +4,6 @@ import {Section} from 'components/Section/Section';
 import {FeedbackOptions} from 'components/FeedbackOptions/FeedbackOptions';
 import {Statistics} from 'components/Statistics/Statistics'
 
-const options = ['good', 'bad', 'neutral'];
 export class App extends React.Component {
   state = {
     good: 0,
@@ -41,7 +40,7 @@ return total ? Math.round((good / total) * 100) : 0;
   return (
    <>
     <Section title={'Please leave feedback'}>
-      <FeedbackOptions options={options} onFeedback={this.handleFeedback}/>
+      <FeedbackOptions options={this.state} onFeedback={this.handleFeedback}/>
     </Section>
     <Section title={'Statistics'}>
 <Statistics good={good} neutral={neutral} bad={bad} total={total} positivePercentage={positivePercentage}/>
